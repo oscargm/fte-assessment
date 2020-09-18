@@ -1,1 +1,1 @@
-export * from "./desktop-layout";
+export * from './desktop-layout';

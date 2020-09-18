@@ -1,35 +1,36 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const webpackConstants = require("./webpack.constants");
+/* eslint-disable @typescript-eslint/no-var-requires */
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpackConstants = require('./webpack.constants');
 
 const commonRules = [
   {
     test: /\.(tsx?)|(js)$/,
     exclude: /node_modules/,
-    loader: "babel-loader",
+    loader: 'babel-loader',
   },
   {
     test: /\.css$/,
     use: [
       {
-        loader: "css-loader",
+        loader: 'css-loader',
       },
     ],
   },
   {
     test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
-    loader: "url-loader",
+    loader: 'url-loader',
     options: {
-      mimetype: "application/font-woff",
+      mimetype: 'application/font-woff',
     },
   },
 ];
 
 const commonPlugins = [
   new HtmlWebpackPlugin({
-    filename: "index.html",
-    template: "index.html",
+    filename: 'index.html',
+    template: 'index.html',
     hash: true,
-    favicon: webpackConstants.assetsPath + "/favicon.ico",
+    favicon: webpackConstants.assetsPath + '/favicon.ico',
   }),
 ];
 
@@ -41,7 +42,7 @@ module.exports = (env = {}) => {
     context: webpackConstants.srcPath,
     devtool: env.devtool,
     resolve: {
-      extensions: [".js", ".ts", ".tsx"],
+      extensions: ['.js', '.ts', '.tsx'],
       alias: {
         app: webpackConstants.srcPath,
         // common: webpackConstants.commonPath,
@@ -50,7 +51,7 @@ module.exports = (env = {}) => {
       },
     },
     entry: {
-      app: [webpackConstants.srcPath + "/index.tsx"],
+      app: [webpackConstants.srcPath + '/index.tsx'],
     },
     module: {
       rules: commonRules,

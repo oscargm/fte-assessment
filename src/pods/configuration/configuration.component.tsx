@@ -1,6 +1,6 @@
-import * as React from "react";
-import { Typography } from "@material-ui/core";
+import * as React from 'react';
+import { Typography } from '@material-ui/core';
 
 export const ConfigurationTable = () => {
-  return <Typography variant={"h3"}>ConfigurationTable</Typography>;
+  return <Typography variant={'h3'}>ConfigurationTable</Typography>;
 };

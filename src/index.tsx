@@ -1,9 +1,9 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import "fontsource-roboto/400.css";
-import { DesktopLayout } from "./layouts";
-import { MainScene } from "./scenes";
-import { RocheThemeProvider } from "./providers";
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import 'fontsource-roboto/400.css';
+import { DesktopLayout } from './layouts';
+import { MainScene } from './scenes';
+import { RocheThemeProvider } from './providers';
 
 const Application = () => (
   <RocheThemeProvider>
@@ -12,4 +12,4 @@ const Application = () => (
     </DesktopLayout>
   </RocheThemeProvider>
 );
-ReactDOM.render(<Application />, document.getElementById("root"));
+ReactDOM.render(<Application />, document.getElementById('root'));

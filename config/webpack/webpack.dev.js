@@ -1,22 +1,23 @@
-const webpack = require("webpack");
-const commonConfiguration = require("./webpack.common");
-const webpackConstants = require("./webpack.constants");
+/* eslint-disable @typescript-eslint/no-var-requires */
+const webpack = require('webpack');
+const commonConfiguration = require('./webpack.common');
+const webpackConstants = require('./webpack.constants');
 
 const devEnv = {
-  environment: "development",
-  devtool: "source-map",
+  environment: 'development',
+  devtool: 'source-map',
   cache: true,
   output: {
     path: webpackConstants.buildPath,
-    filename: "[name].js",
+    filename: '[name].js',
   },
   devServer: {
     contentBase: webpackConstants.buildPath,
     inline: true,
     https: false,
-    host: "localhost",
+    host: 'localhost',
     port: 4300,
-    stats: "minimal",
+    stats: 'minimal',
     historyApiFallback: true,
     hot: true,
     open: true,

@@ -1,5 +1,5 @@
-import * as React from "react";
-import { Tab } from "@material-ui/core";
+import * as React from 'react';
+import { Tab } from '@material-ui/core';
 
 interface LinkTabProps {
   label?: string;

@@ -1,23 +1,23 @@
-import * as React from "react";
-import { Container, Grid, makeStyles } from "@material-ui/core";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import { ApplicationAppbar } from "../pods/core/app-bar";
-import { ApplicationMenu } from "../pods/core/app-menu";
+import * as React from 'react';
+import { Container, Grid, makeStyles } from '@material-ui/core';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { ApplicationAppbar } from '../pods/core/app-bar';
+import { ApplicationMenu } from '../pods/core/app-menu';
 
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: "flex",
+    display: 'flex',
   },
   appBarSpacer: theme.mixins.toolbar,
   content: {
     flexGrow: 1,
-    height: "100vh",
-    overflow: "auto",
+    height: '100vh',
+    overflow: 'auto',
   },
   container: {
-    width: "100%",
+    width: '100%',
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(4),
   },
