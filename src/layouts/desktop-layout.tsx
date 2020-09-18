@@ -1,27 +1,8 @@
 import * as React from "react";
-import {
-  AppBar,
-  Container,
-  Divider,
-  Drawer,
-  Grid,
-  IconButton,
-  List,
-  makeStyles,
-  Paper,
-  Toolbar,
-  Typography,
-} from "@material-ui/core";
-import MenuIcon from "@material-ui/icons/Menu";
+import { Container, Grid, makeStyles } from "@material-ui/core";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import Badge from "@material-ui/core/Badge";
-import NotificationsIcon from "@material-ui/icons/Notifications";
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import { mainListItems, secondaryListItems } from "./list-items";
-import Menu from "@material-ui/core/Menu";
-import MenuItem from "@material-ui/core/MenuItem";
-import { ApplicationAppbar } from "../pods/app-bar/app-bar.component";
-import { ApplicationMenu } from "../pods/app-menu/app-menu.component";
+import { ApplicationAppbar } from "../pods/core/app-bar";
+import { ApplicationMenu } from "../pods/core/app-menu";
 
 const drawerWidth = 240;
 
@@ -36,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
     overflow: "auto",
   },
   container: {
+    width: "100%",
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(4),
   },
@@ -58,7 +40,7 @@ export const DesktopLayout: React.FC = ({ children }) => {
       <ApplicationMenu open={open} handleDrawerClose={handleDrawerClose} />
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
-        <Container maxWidth="lg" className={classes.container}>
+        <Container maxWidth={false} className={classes.container}>
           <Grid container spacing={3}>
             {children}
           </Grid>

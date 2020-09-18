@@ -1,15 +1,12 @@
 import * as React from "react";
 import {
-  Paper,
-  Menu,
-  MenuItem,
   Divider,
   Drawer,
   IconButton,
   List,
   makeStyles,
 } from "@material-ui/core";
-import { mainListItems, secondaryListItems } from "../../layouts/list-items";
+import { mainListItems, secondaryListItems } from "./list-items";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 
 const drawerWidth = 240;
