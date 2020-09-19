@@ -46,7 +46,9 @@ interface ApplicationMenuProps {
   handleDrawerClose: () => void;
 }
 
-export const ApplicationMenu = (props: ApplicationMenuProps) => {
+export const ApplicationMenu: React.FC<ApplicationMenuProps> = (
+  props: ApplicationMenuProps
+) => {
   const classes = useStyles();
   const { open, handleDrawerClose } = props;
   return (
@@ -56,6 +58,7 @@ export const ApplicationMenu = (props: ApplicationMenuProps) => {
         paper: `${classes.drawerPaper} ${!open && classes.drawerPaperClose}`,
       }}
       open={open}
+      data-testid={'left-menu'}
     >
       <div className={classes.toolbarIcon}>
         <IconButton onClick={handleDrawerClose}>

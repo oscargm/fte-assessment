@@ -45,8 +45,8 @@ module.exports = (env = {}) => {
       extensions: ['.js', '.ts', '.tsx'],
       alias: {
         app: webpackConstants.srcPath,
+        pods: webpackConstants.podsPath,
         // common: webpackConstants.commonPath,
-        // pods: webpackConstants.podsPath,
         // assets: webpackConstants.assetsPath
       },
     },

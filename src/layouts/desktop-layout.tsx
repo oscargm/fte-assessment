@@ -1,10 +1,8 @@
 import * as React from 'react';
-import { Container, Grid, makeStyles } from '@material-ui/core';
+import { Container, makeStyles } from '@material-ui/core';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { ApplicationAppbar } from '../pods/core/app-bar';
+import { Header } from '../pods/core/header';
 import { ApplicationMenu } from '../pods/core/app-menu';
-
-const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,16 +34,15 @@ export const DesktopLayout: React.FC = ({ children }) => {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <ApplicationAppbar handleDrawerOpen={handleDrawerOpen} open={open} />
+      <Header handleDrawerOpen={handleDrawerOpen} open={open} />
       <ApplicationMenu open={open} handleDrawerClose={handleDrawerClose} />
-      <main className={classes.content}>
+      <main className={classes.content} data-testid={'content'}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth={false} className={classes.container}>
-          <Grid container spacing={3}>
-            {children}
-          </Grid>
+          {children}
         </Container>
       </main>
+      {/* //TODO: create footer  */}
     </div>
   );
 };

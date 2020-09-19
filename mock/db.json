@@ -10000,5 +10000,12 @@
       "country": "China",
       "next_visit": "2019-10-09T19:52:19Z"
     }
+  ],
+  "configurations": [
+    {
+      "id": 1,
+      "name": "config 1",
+      "enabled": true
+    }
   ]
 }

@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const MainScene = () => {
+export const MainScene: React.FC = () => {
   const classes = useStyles();
   const [tabIndex, setTabIndex] = React.useState<number>(0);
 

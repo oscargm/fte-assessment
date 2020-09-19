@@ -5,7 +5,7 @@ import { DesktopLayout } from './layouts';
 import { MainScene } from './scenes';
 import { RocheThemeProvider } from './providers';
 
-const Application = () => (
+const Application: React.FC = () => (
   <RocheThemeProvider>
     <DesktopLayout>
       <MainScene />

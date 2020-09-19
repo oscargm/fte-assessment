@@ -42,20 +42,21 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-interface ApplicationAppbarProps {
+interface HeaderProps {
   handleDrawerOpen: (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => void;
   open: boolean;
 }
 
-export const ApplicationAppbar = (props: ApplicationAppbarProps) => {
+export const Header: React.FC<HeaderProps> = (props: HeaderProps) => {
   const classes = useStyles();
   const { handleDrawerOpen, open } = props;
   return (
     <AppBar
       position="absolute"
       className={`${classes.appBar} ${open && classes.appBarShift}`}
+      data-testid={'header'}
     >
       <Toolbar className={classes.toolbar}>
         <IconButton
