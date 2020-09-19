@@ -5,13 +5,14 @@ import {
   IconButton,
   List,
   makeStyles,
+  Theme,
 } from '@material-ui/core';
 import { mainListItems, secondaryListItems } from './list-items';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 
 const drawerWidth = 240;
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
   drawerPaper: {
     position: 'relative',
     whiteSpace: 'nowrap',

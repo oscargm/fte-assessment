@@ -5,3 +5,5 @@ const BASE_URL =
 
 export const CONFIGURATIONS_URL =
   process.env.CONFIGURATIONS_URL ?? `${BASE_URL}/configurations`;
+
+export const PATIENTS_URL = process.env.PATIENTS_URL ?? `${BASE_URL}/patients`;

@@ -17,11 +17,15 @@ const useStyles = makeStyles({
 });
 
 export const ConfigurationTable: React.FC = () => {
+  const [isLoaded, setIsLoaded] = React.useState<boolean>(false);
   const [configurations, setConfigurations] = React.useState<Configuration[]>(
     []
   );
   React.useEffect(() => {
-    getConfigurations().then((response) => setConfigurations(response));
+    getConfigurations().then((response) => {
+      setConfigurations(response);
+      setIsLoaded(true);
+    });
   }, []);
 
   const classes = useStyles();
@@ -32,7 +36,9 @@ export const ConfigurationTable: React.FC = () => {
         <FTETableBody data={configurations} />
       </Table>
     </TableContainer>
+  ) : isLoaded ? (
+    <Typography variant={'body1'}> No data to display</Typography>
   ) : (
-    <Typography variant={'body1'}>No data to display</Typography>
+    <Typography variant={'body1'}> Loading data...</Typography>
   );
 };

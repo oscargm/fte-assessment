@@ -10004,7 +10004,17 @@
   "configurations": [
     {
       "id": 1,
-      "name": "config 1",
+      "name": "Config 1",
+      "enabled": true
+    },
+    {
+      "id": 2,
+      "name": "Hospital 1",
+      "enabled": true
+    },
+    {
+      "id": 3,
+      "name": "Hospital 2",
       "enabled": true
     }
   ]

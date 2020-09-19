@@ -1,10 +1,10 @@
-import { makeStyles, Paper, Tabs } from '@material-ui/core';
+import { makeStyles, Paper, Tabs, Theme } from '@material-ui/core';
 import * as React from 'react';
 import { LinkTab, TabPanel } from '../common/tabs';
 import { ConfigurationTable } from '../pods/configuration';
 import { Patients } from '../pods/patients';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
