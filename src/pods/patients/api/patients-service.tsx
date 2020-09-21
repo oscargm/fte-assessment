@@ -1,4 +1,4 @@
-import { PATIENTS_URL } from 'pods/core/constants';
+import { PATIENTS_URL } from './constants';
 import { NumberOfRecords } from '../model';
 import { Patient } from './model';
 

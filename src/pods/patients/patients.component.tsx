@@ -38,7 +38,7 @@ export const Patients: React.FC = () => {
 
   const load = (callback: () => void) =>
     getPatients(recordsToLoad).then((response) => {
-      setPatients(mapPatientsToDomain(response));
+      setPatients(mapPatientsToDomain(response)); // TODO: replace rest endpoints for graphql middleware to map different entities into one in the server instead of the client (BFF)
       callback();
     });
 

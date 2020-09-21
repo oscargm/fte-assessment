@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpackConstants = require('./webpack.constants');
 
@@ -25,18 +26,26 @@ const commonRules = [
   },
 ];
 
-const commonPlugins = [
-  new HtmlWebpackPlugin({
-    filename: 'index.html',
-    template: 'index.html',
-    hash: true,
-    favicon: webpackConstants.assetsPath + '/favicon.ico',
-  }),
-];
+const commonPlugins = (env) => {
+  return [
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'index.html',
+      hash: true,
+      favicon: webpackConstants.assetsPath + '/favicon.ico',
+    }),
+    new webpack.DefinePlugin({
+      ...webpackConstants.endpoints,
+      'process.env.NODE_ENV': JSON.stringify(env.environment),
+    }),
+  ];
+};
 
 module.exports = (env = {}) => {
   const config = {
-    plugins: env.plugins ? commonPlugins.concat(env.plugins) : commonPlugins,
+    plugins: env.plugins
+      ? commonPlugins(env).concat(env.plugins)
+      : commonPlugins(env),
     mode: env.environment,
     cache: env.cache,
     context: webpackConstants.srcPath,

@@ -1,0 +1,8 @@
+# build environment
+FROM node:13.12.0-alpine
+WORKDIR /app
+ENV PATH /app/node_modules/.bin:$PATH
+COPY mock ./mock
+RUN npm i -g json-server
+EXPOSE 3000
+#RUN json-server --watch ./mock/db.json

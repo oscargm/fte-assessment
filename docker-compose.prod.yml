@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  sample-prod:
+    container_name: sample-prod
+    build:
+      context: .
+      dockerfile: dockerfile.prod
+    ports:
+      - '1337:80'
+  mock-server:
+    container_name: mock-server
+    build:
+      context: .
+      dockerfile: dockerfile.mock
+    ports:
+      - '1338:3000'

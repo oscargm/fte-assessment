@@ -1,5 +1,5 @@
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import * as React from 'react';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
   //   spacing: 24,

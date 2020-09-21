@@ -1,4 +1,4 @@
-import { CONFIGURATIONS_URL } from 'pods/core/constants';
+import { CONFIGURATIONS_URL } from './constants';
 import { Configuration } from '../model';
 
 export const getConfigurations = (): Promise<Configuration[]> => {
