@@ -14,13 +14,18 @@ import {
 } from '@material-ui/core';
 import { NumberOfRecords, Patient } from './model';
 import { getPatients } from './api';
-import { FTETableHeader, FTETableBody } from 'pods/core/table';
+import { FTETableHeader, FTETableBody } from '../../common/table';
 import { mapPatientsToDomain } from './mappers';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     table: {
-      minWidth: 650,
+      [theme.breakpoints.up('md')]: {
+        minWidth: 650,
+      },
+      [theme.breakpoints.down('md')]: {
+        maxWidth: 600,
+      },
     },
     formControl: {
       margin: theme.spacing(1),

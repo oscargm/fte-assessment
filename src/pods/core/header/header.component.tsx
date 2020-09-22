@@ -48,11 +48,12 @@ interface HeaderProps {
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => void;
   open: boolean;
+  isDesktop: boolean;
 }
 
 export const Header: React.FC<HeaderProps> = (props: HeaderProps) => {
   const classes = useStyles();
-  const { handleDrawerOpen, open } = props;
+  const { handleDrawerOpen, open, isDesktop } = props;
   return (
     <AppBar
       position="absolute"
@@ -60,16 +61,20 @@ export const Header: React.FC<HeaderProps> = (props: HeaderProps) => {
       data-testid={'header'}
     >
       <Toolbar className={classes.toolbar}>
-        <IconButton
-          edge="start"
-          color="inherit"
-          aria-label="open drawer"
-          onClick={handleDrawerOpen}
-          className={`${classes.menuButton} ${open && classes.menuButtonHidden}
+        {!isDesktop && (
+          <IconButton
+            edge="start"
+            color="inherit"
+            aria-label="open drawer"
+            onClick={handleDrawerOpen}
+            className={`${classes.menuButton} ${
+              open && classes.menuButtonHidden
+            }
             `}
-        >
-          <MenuIcon />
-        </IconButton>
+          >
+            <MenuIcon />
+          </IconButton>
+        )}
         <Typography
           component="h1"
           variant="h6"

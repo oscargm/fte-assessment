@@ -8,7 +8,7 @@ import {
 } from '@material-ui/core';
 import { Configuration } from './model';
 import { getConfigurations } from './api';
-import { FTETableHeader, FTETableBody } from 'pods/core/table';
+import { FTETableHeader, FTETableBody } from '../../common/table';
 
 const useStyles = makeStyles({
   table: {

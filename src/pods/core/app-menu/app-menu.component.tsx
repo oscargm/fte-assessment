@@ -45,13 +45,14 @@ const useStyles = makeStyles((theme: Theme) => ({
 interface ApplicationMenuProps {
   open: boolean;
   handleDrawerClose: () => void;
+  isDesktop: boolean;
 }
 
 export const ApplicationMenu: React.FC<ApplicationMenuProps> = (
   props: ApplicationMenuProps
 ) => {
   const classes = useStyles();
-  const { open, handleDrawerClose } = props;
+  const { open, handleDrawerClose, isDesktop } = props;
   return (
     <Drawer
       variant="permanent"
@@ -61,11 +62,15 @@ export const ApplicationMenu: React.FC<ApplicationMenuProps> = (
       open={open}
       data-testid={'left-menu'}
     >
-      <div className={classes.toolbarIcon}>
-        <IconButton onClick={handleDrawerClose}>
-          <ChevronLeftIcon />
-        </IconButton>
-      </div>
+      {!isDesktop ? (
+        <div className={classes.toolbarIcon}>
+          <IconButton onClick={handleDrawerClose}>
+            <ChevronLeftIcon />
+          </IconButton>
+        </div>
+      ) : (
+        <div className={classes.toolbarIcon}></div>
+      )}
       <Divider />
       <List>{mainListItems}</List>
       <Divider />
