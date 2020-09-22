@@ -26,6 +26,8 @@
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
+    "@material/mwc-switch": "^0.18.0",
+    "@webcomponents/webcomponentsjs": "^2.4.4",
     "fontsource-roboto": "^3.0.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
