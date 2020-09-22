@@ -3,7 +3,7 @@ import { Container, makeStyles, Typography } from '@material-ui/core';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { Header } from '../pods/core/header';
 import { ApplicationMenu } from '../pods/core/app-menu';
-import { Toolbar } from '@material-ui/core';
+import { Footer } from 'pods/core/footer';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,16 +19,6 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(4),
-  },
-  toolbar: {
-    position: 'fixed',
-    bottom: 0,
-    display: 'flex',
-    width: '100%',
-    justifyContent: 'center',
-    // borderTop: '1px solid black',
-    background: theme.palette.background.paper,
-    boxShadow: theme.shadows[1],
   },
 }));
 
@@ -52,9 +42,7 @@ export const DesktopLayout: React.FC = ({ children }) => {
             {children}
           </Container>
         </main>
-        <Toolbar className={classes.toolbar}>
-          <Typography variant={'body2'}>&#169; Roche 2020</Typography>
-        </Toolbar>
+        <Footer />
       </div>
     </>
   );

@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { Container, makeStyles } from '@material-ui/core';
+import { Container, makeStyles, Toolbar, Typography } from '@material-ui/core';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { Header } from '../pods/core/header';
 import { ApplicationMenu } from 'pods/core/app-menu';
+import { Footer } from 'pods/core/footer';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -51,7 +52,7 @@ export const MobileLayout: React.FC = ({ children }) => {
           {children}
         </Container>
       </main>
-      {/* //TODO: create footer  */}
+      <Footer />
     </div>
   );
 };
