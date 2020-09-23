@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { makeStyles, Toolbar, Typography } from '@material-ui/core';
-import '@material/mwc-switch';
+// import '@material/mwc-switch';
 const useStyles = makeStyles((theme) => ({
   toolbar: {
     position: 'fixed',
