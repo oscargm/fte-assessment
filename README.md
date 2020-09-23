@@ -1,7 +1,7 @@
-# Roche frontend technical expert assessment
+# frontend technical expert assessment
 
 Status:
-![CI](https://github.com/oscargm/roche-fte-assessment/workflows/CI/badge.svg)
+![CI](https://github.com/oscargm/fte-assessment/workflows/CI/badge.svg)
 
 React Web application containing a dashboard with patients and configuration table.
 
@@ -41,8 +41,8 @@ React Web application containing a dashboard with patients and configuration tab
 ## Start developing
 
 ```bash
-git clone https://github.com/oscargm/roche-fte-assessment
-cd roche-fte-assessment
+git clone https://github.com/oscargm/fte-assessment
+cd fte-assessment
 npm i
 npm start
 # Test

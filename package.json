@@ -1,7 +1,7 @@
 {
-  "name": "roche-fte-assessment",
+  "name": "fte-assessment",
   "version": "1.0.0",
-  "description": "Roche [Frontend Technical Expert] assessment",
+  "description": "[Frontend Technical Expert] assessment",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf build",
